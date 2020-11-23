@@ -23,7 +23,7 @@
     "react-test-renderer": "<current-version>"
   },
   "scripts": {
-    "deploy": "git add . && git commit -m Heroku && git push heroku master",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
