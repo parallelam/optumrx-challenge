@@ -21,9 +21,10 @@ const SignupForm = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        alert(JSON.stringify(values, null, 4));
-        const response = await axios.post(`${process.env.REACT_APP_SIGNUP_POST_URI}`, values);
-        return response;
+        const axiosResponseObject = await axios.post(`${process.env.REACT_APP_SIGNUP_POST_URI}`, values);
+        console.log('Axios Response:');
+        console.log(axiosResponseObject);
+        return axiosResponseObject;
       } catch (error) {
         console.error(`Error Experienced:\n${error}`);
       }
