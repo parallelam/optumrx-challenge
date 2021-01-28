@@ -4,15 +4,15 @@
 
 - Hosted Demo Available At:
 
-```
-https://optumrx-challenge-ui-react.herokuapp.com/
-```
+  ```Text
+  https://optumrx-challenge-ui-react.herokuapp.com/
+  ```
 
 - Outputs from Backend API Response Viewable via Inspect Element
 
 ## TypeScript
 
-Declined TypeScript for this project as current version is application breaking.
+Declined TypeScript for this project as current release version is application breaking.
 
 TypeScript Issue 1: https://github.com/facebook/create-react-app/issues/9429
 
@@ -22,39 +22,63 @@ TypeScrpt solution appears to be configuration of compatible versions between de
 
 ## Legacy Application Refactor
 
-- MVC deployed is handlebars, not React; refactoring in motion.
+- MVC deployed is handlebars, not React; refactored fork URI with Formik
+
+  ```text
+  https://github.com/parallelam/Eatme-Formik
+  ```
 
 ## Run Locally
 
-- Clone Repository
+- Install [NodeJS](https://nodejs.org/en/)
+
+- Clone Repository to Local
+
+  ```bash
+  git clone https://github.com/parallelam/optumrx-challenge
+  ```
+
 - Run NPM Install for Dependency Installation
+
+  ```bash
+  npm install
+  ```
+
 - Run Script from Root Directory:
 
-```
-
-```
+  ```bash
+  npm run start
+  ```
 
 ## Docker Instructions
 
 - Build and Tag the Docker Image via CLI:
 
-```
-$ docker build -t sample:dev .
-```
+  ```docker
+  # Docker Command
+  docker build -t sample:dev .
+  ```
 
 - Spin Up Container Once Build Finish:
 
-```
-$ docker run \
-    -it \
-    --rm \
-    -v ${PWD}:/app \
-    -v /app/node_modules \
-    -p 3001:3000 \
-    -e CHOKIDAR_USEPOLLING=true \
-    sample:dev
-```
+  ```docker
+  # Docker Command
+    docker run \
+      -it \
+      --rm \
+      -v ${PWD}:/app \
+      -v /app/node_modules \
+      -p 3001:3000 \
+      -e CHOKIDAR_USEPOLLING=true \
+      sample:dev
+  ```
+
+## Application Launch
+
+- URI:
+
+  ```text
+  http://localhost:3001/
+  ```
 
 - If you run into an "ENOENT: no such file or directory, open '/app/package.json". error, you may need to add an additional volume: -v /app/package.json.
-
-* Application should be demoable at: http://localhost:3001/
